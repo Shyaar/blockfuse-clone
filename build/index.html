@@ -5,65 +5,68 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Blockfuse labs</title>
-  <!-- <link rel="stylesheet" href="/build/css/style.css"> -->
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/build/css/style.css">
+  <!-- <script src="https://cdn.tailwindcss.com"></script> -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     integrity="sha384-KyZXEAg3QhqLMpG8r+Knujsl5+5hb7ie1U8R2q4FZ5jFG2O5gf5F5z5F5F5F5F5" crossorigin="anonymous" />
 </head>
 
-<body class="bg-gray-800 flex flex-col justify-center content-center text-white   ">
-  <nav class="flex justify-between mx-[90px] my-[30px] bg-[#2F2E34] px-[20px] py-[6px] z-10 relative  ">
+<body class="bg-gray-800 flex flex-col justify-center content-center text-white">
+  <nav class="flex mx-4 lg:mx-[90px] my-[30px]  justify-between  bg-[#2F2E34] px-[20px] py-[6px] z-10 relative">
     <div id="logo">
       <img src="/build/img/blockfuse-logo-BgIWHfHT.png" alt="bfl logo" width="30px" />
     </div>
-    <ul class="flex gap-3 self-center text-[14px] text-white">
-      <li>Home</li>
-      <li>About us</li>
-      <li>Team</li>
-      <li>Boot camps</li>
-      <li>Events</li>
-      <li>Alumni</li>
-      <li>Blog</li>
-      <li>Open Source</li>
-      <li>Contact us</li>
-      <li>Faucet</li>
-    </ul>
-    <div id="btns" class="flex gap-3">
-      <button class="bg-black border border-purple-600 px-[15px] py-[8px] text-white">
-        Donate
-      </button>
-      <div class="bg-gradient-to-r from-purple-600 px-[15px] py-[8px] flex to-purple-400 text-white">
-        <button class="">Apply now</button>
-        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ffffff">
-          <path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z" />
-        </svg>
+    <div id="m-hide" class="hidden lg:flex">
+      <ul class="flex gap-3 self-center text-[14px] text-white">
+        <li>Home</li>
+        <li><a href="/About.html">About us</a></li>
+        <li>Team</li>
+        <li>Boot camps</li>
+        <li>Events</li>
+        <li>Alumni</li>
+        <li>Blog</li>
+        <li>Open Source</li>
+        <li>Contact us</li>
+        <li>Faucet</li>
+      </ul>
+      <div id="btns" class="flex gap-3">
+        <button class="bg-black border border-purple-600 px-[15px] py-[8px] text-white">
+          Donate
+        </button>
+        <div class="bg-gradient-to-r from-purple-600 px-[15px] py-[8px] flex to-purple-400 text-white">
+          <button class="">Apply now</button>
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ffffff">
+            <path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z" />
+          </svg>
+        </div>
+        <button class="w-9 h-9 rounded-full bg-zinc-800 flex items-center justify-center" aria-label="Toggle theme"><svg
+            xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-sun w-5 h-5 text-gray-300">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2"></path>
+            <path d="M12 20v2"></path>
+            <path d="m4.93 4.93 1.41 1.41"></path>
+            <path d="m17.66 17.66 1.41 1.41"></path>
+            <path d="M2 12h2"></path>
+            <path d="M20 12h2"></path>
+            <path d="m6.34 17.66-1.41 1.41"></path>
+            <path d="m19.07 4.93-1.41 1.41"></path>
+          </svg></button>
       </div>
-      <button class="w-9 h-9 rounded-full bg-zinc-800 flex items-center justify-center" aria-label="Toggle theme"><svg
-          xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-          class="lucide lucide-sun w-5 h-5 text-gray-300">
-          <circle cx="12" cy="12" r="4"></circle>
-          <path d="M12 2v2"></path>
-          <path d="M12 20v2"></path>
-          <path d="m4.93 4.93 1.41 1.41"></path>
-          <path d="m17.66 17.66 1.41 1.41"></path>
-          <path d="M2 12h2"></path>
-          <path d="M20 12h2"></path>
-          <path d="m6.34 17.66-1.41 1.41"></path>
-          <path d="m19.07 4.93-1.41 1.41"></path>
-        </svg></button>
-        
     </div>
+    <button class="w-9 h-9 rounded-full bg-zinc-800 flex items-center justify-center lg:hidden"
+      aria-label="hamburger menu">&#9776;</button>
   </nav>
 
   <section id="hero" class="mb-[200px]">
     <div class="flex relative justify-center">
       <img src="/build/img/zigzag-q2OLhjMn.svg" alt="background image"
-        class="absolute -top-[200px] opacity-[20%] z-0" />
+        class="lg:absolute -top-[200px] opacity-[20%] z-0" />
     </div>
 
     <div id="hero-text" class="flex flex-col justify-center content-center gap-[24px] text-white mt-[80px]">
-      <h1 class="text-[70px] font-bold w-fit self-center">
+      <h1 class="flex text-[40px] justify center lg:text-[70px] font-bold w-fit self-center">
         Unlock the Future with<span class="text-purple-700"> Blockchain</span>
       </h1>
       <p class="mx-[350px] w-fit text-[24px] text-center">
@@ -401,7 +404,8 @@
   <section id="faqs" class="flex flex-col py-[60px] mx-[100px] justify-center content-center gap-8">
     <div class="flex flex-col justify-center content-center mb-[60px] gap-4 ">
       <h2 class="font-bold text-[32px] self-center">FAQ's</h2>
-      <p class="text-center w-[800px] self-center">SEverything you need to know about Blockfuse Labs! Can’t find the answer you’re looking for? Please chat with our friendly team, or <span class="text-purple-400 underline">reach
+      <p class="text-center w-[800px] self-center">SEverything you need to know about Blockfuse Labs! Can’t find the
+        answer you’re looking for? Please chat with our friendly team, or <span class="text-purple-400 underline">reach
           out to us on our Telegram channel here.</span></p>
     </div>
     <div class="flex justify-center content-center gap-4 border-b border-purple-700">
@@ -430,8 +434,7 @@
     </div>
   </section>
 
-  <section id="Subscribe"
-    class="flex flex-col py-[100px] px-[100px] justify-center content-center gap-8 bg-[#2F2E34] ">
+  <section id="Subscribe" class="flex flex-col py-[100px] px-[100px] justify-center content-center gap-8 bg-[#2F2E34] ">
     <div class="flex flex-col justify-center content-center mb-[20px] gap-4 ">
       <h2 class="font-bold text-[32px] self-center">Subscribe to Our Newsletter</h2>
       <p class="text-center w-[800px] self-center">Stay ahead in the world of blockchain! Get the latest updates,
@@ -451,8 +454,7 @@
     </div>
   </section>
 
-  <section id="join community"
-    class="flex flex-col py-[100px] px-[100px] justify-center content-center gap-8">
+  <section id="join community" class="flex flex-col py-[100px] px-[100px] justify-center content-center gap-8">
     <div class="flex flex-col justify-center content-center mb-[20px] gap-4 ">
       <h2 class="font-bold text-[32px] self-center">Join our Community</h2>
       <p class="text-center w-[800px] self-center">Become part of a thriving network of blockchain enthusiasts and
